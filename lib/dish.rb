@@ -10,6 +10,6 @@ class Dish
 
   def show_dish
     # returns dish as a string
-    "#{name}: £#{price}"
+    "#{@name}: £#{@price}"
   end
 end
