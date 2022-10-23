@@ -36,6 +36,8 @@ that? How will you keep that information out of your repository?
    │     -add        │
    │     -dish       │
    │     -all        │
+   │     -dish_name  │
+   │     -dish_price │
    │                 │
    └────────┬────────┘
             │
@@ -85,6 +87,14 @@ class Menu (name, price)
 
   def all
     #shows entire menu
+  end
+
+  def dish_name
+    # shows dish names based on prices
+  end
+
+  def dish_price
+    # shows dish prices based on name
   end
 
 end
