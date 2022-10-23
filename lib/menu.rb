@@ -1,20 +1,29 @@
 class Menu
   
-  def initialize(name,price)
-    
+  def initialize
+    @menu = {}
   end
 
-  def add
+  def add(name,price)
     # adds dishes to menu hash
-  end
-
-  def dish
-    # returns a single dish's name and price
+    @menu[name] = price
   end
 
   def all
-    #shows entire menu
-    {}
+    #returns the entire menu
+    @menu
+  end
+
+  def dish_name(price)
+    # returns dish's name
+    return @menu.key(price)
+
+    
+  end
+
+  def dish_price(name)
+    # returns dish's price
+    return @menu[name] 
   end
 
 end
