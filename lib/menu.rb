@@ -17,4 +17,5 @@ class Menu
   def price_check(dish)
     @menu[dish]
   end
+
 end

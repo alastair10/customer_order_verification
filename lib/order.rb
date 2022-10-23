@@ -20,6 +20,19 @@ class Order
   def receipt
     # takes instance of dish
     # displays itemised receipt
-    @basket.map {|dish, quantity| "#{dish} x#{quantity} Total Price: #{@menu.price_check(dish)} Total Price: #{@menu.price_check(dish)*quantity}"}.join("\n")
+    @basket.map {|dish, quantity|
+    price = @menu.price_check(dish)
+    total_price = tot_price_calc(price, quantity)
+    print_order(dish, quantity, total_price)}.join("\n")
+  end
+
+  private
+
+  def tot_price_calc(price, quantity)
+    price * quantity
+  end
+
+  def print_order(dish, quantity, total_price)
+    "#{dish.capitalize} x#{quantity} Total Price: £#{'%0.2f' % total_price}"
   end
 end
